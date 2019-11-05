@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Note - VueJs</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!--  
+        #app
+        this is component principal.
+
+        Este es el componente principal donde se ejecuta todo.
+    -->
+    <div id="app">
+        <Navbar title="Notes" :login="login" @update-login="changeStateLogin"></Navbar>
+        <router-view @update-login="changeStateLogin"></router-view>
+    </div>
+
+    <!-- 
+        assets
+        bienes
+     -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/vue.js"></script>
+    <script src="assets/js/vue-router.js"></script>
+    <!-- 
+        Components
+        Componentes
+     -->
+    <script src="components/loader.js"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/modal.js"></script>
+    <script src="components/info.js"></script>
+    <!-- 
+        views
+        vistas
+     -->
+    <script src="views/index.js"></script>
+    <script src="views/login.js"></script>
+    <script src="views/register.js"></script>
+    <script src="views/note.js"></script>
+    <!-- 
+        other
+        otros
+     -->
+    <script src="store/main.js"></script>
+    <script src="routes/main.js"></script>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
